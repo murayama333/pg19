@@ -1,6 +1,7 @@
 # Linux - DAY1
 
-+ Webアプリケーション
++ Webアプリケーション概要
+  + ![](img/linux01.png?v2)
   + HTML/CSS/JS
   + PHP/SQL/Linux
 + 開発ツール
@@ -19,8 +20,5 @@
     + OS
     + ミドルウェア
     + アプリケーション
-+ OS
-  + GUIとCUI
-  + Windows
-  + Linux
-+ 演習：Webサーバの構築
++ 演習1：GUIとCUI
++ 演習2：Webサーバの構築
