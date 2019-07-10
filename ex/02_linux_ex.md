@@ -5,16 +5,17 @@
 次の構成に従ってディレクトリ、ファイルを作成してください。
 
 ```
-murayama
-├── america
-├── china
-└── japan
-    ├── kyoto
-    ├── osaka
-    │   ├── higashiosakashi.txt
-    │   ├── osakashi.txt
-    │   └── sakaishi.txt
-    └── tokyo
+.
+└── country
+    ├── america
+    ├── china
+    └── japan
+        ├── kyoto
+        ├── osaka
+        │   ├── higashiosakashi.txt
+        │   ├── osakashi.txt
+        │   └── sakaishi.txt
+        └── tokyo
 ```
 
 以下のコマンドを実行してから作業を開始してください。
@@ -25,6 +26,18 @@ cd murayama
 ```
 
 ### ヒント
+
++ `country` ディレクトリを作成します。
+
+```
+??? country
+```
+
++ `country` ディレクトリに移動します。
+
+```
+??? country
+```
 
 + `japan, america, china` 3つのディレクトリを作成します。
 
@@ -79,6 +92,8 @@ VIエディタの操作方法について確認しておきましょう。
 ```
 mkdir murayama
 cd murayama
+mkdir country
+cd country
 mkdir japan
 mkdir america
 mkdir china
