@@ -57,6 +57,7 @@ cd murayama
 + `osaka` ディレクトリに移動します。
 + `osakashi.txt, sakaishi.txt, higashiosakashi.txt` 3つのファイルを作成します。
   + ファイルの中身は空とします。
+    > ファイルの作成にはtouchコマンドを使用します。
 
 ---
 
