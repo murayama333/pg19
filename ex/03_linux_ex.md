@@ -1,55 +1,99 @@
-# エクササイズ
+# エクササイズ - PHP
 
-## login.html
+## hello.php
 
 次のプログラムを作成してください。
 
-```html
+```php
+<?php
+$name = "Alice";
+echo "Hello ";
+echo $name;
+```
+
+プログラムを作成したらphpコマンドで実行します。
+
+```
+$ php hello.php
+Hello Alice
+```
+
+---
+
+## hello2.php
+
+次のプログラムを作成してください。
+
+```php
+<?php
+$title = "Hello PHP";
+for ($i = 0; $i < 5; $i++) {
+  echo $title;
+}
+```
+
+プログラムを作成したらphpコマンドで実行します。
+
+```
+$ php hello2.php
+Hello PHPHello PHPHello PHPHello PHPHello PHP
+```
+
+---
+
+## hello3.php
+
+```php
+<?php
+$title = "Hello PHP";
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title><?php echo $title ?></title>
   </head>
   <body>
-    <h3>Login</h3>
-    <hr>
-    <form action="login.php" method="post">
-      ID:<input type="text" name="id">
-      PASS:<input type="password" name="pass">
-      <input type="submit" value="login">
-    </form>
+    <h1><?php echo $title ?></h1>
+  </body>
+</html>
+```
+
+プログラムを作成したらphpコマンドで実行します。
+
+```
+$ php hello3.php
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello PHP</title>
+  </head>
+  <body>
+    <h1>Hello PHP</h1>
   </body>
 </html>
 ```
 
 ---
 
-## login.php
+## mkdir.php
 
 次のプログラムを作成してください。
 
 ```php
 <?php
-$id = $_POST["id"];
-$pass = $_POST["pass"];
+$names = ["Apple", "Banana", "Cherry"];
 
-$message = "Error";
-if ($id == "user1" && $pass == "pass1") {
-    $message = "Success";
+for ($i = 0; $i < 3; $i++) {
+  mkdir($names[$i]);
 }
-?>
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-  </head>
-  <body>
-    <h3>Login</h3>
-    <hr>
-    <h4><?php echo $message; ?></h4>
-  </body>
-</html>
 ```
 
+プログラムを作成したらphpコマンドで実行します。
+
+```
+$ php hello4.php
+```
+
+> lsコマンドを実行して`Apple`, `Banana`, `Cherry`ディレクトリが作成されていることを確認してみましょう。
