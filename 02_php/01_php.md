@@ -16,6 +16,8 @@ echo $message;
 Hello World
 ```
 
+---
+
 ### 考察
 
 + [php.net](https://www.php.net/)

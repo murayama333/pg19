@@ -22,6 +22,8 @@ echo $total;
 1000
 ```
 
+---
+
 ### var2.php
 
 ```php
@@ -39,6 +41,8 @@ echo $count;
 > php var2.php
 2
 ```
+
+---
 
 ### 考察
 
