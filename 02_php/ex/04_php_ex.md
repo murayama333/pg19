@@ -1,148 +1,185 @@
 # エクササイズ - 制御構文 - 反復構造 - while文
 
-## var_ex1.php
+## while_ex1.php
 
 次の実行結果となるようにPHPプログラムを作成してください。
 
+### 実行結果
+
 ```
-> php var_ex1.php
-PRICE:100
+> php while_ex1.php
+1
+2
+3
+4
+5
 ```
 
 ### ヒント
 
 ```
 <?php
-$price = 100;
-echo "PRICE:";
-echo ???;
+$i = 1;
+
+while (???) {
+  echo $i . PHP_EOL;
+  ???;
+}
 ```
 
 ---
 
-## var_ex2.php
+## while_ex2.php
 
 次の実行結果となるようにPHPプログラムを作成してください。
 
+### 実行結果
+
 ```
-> php var_ex2.php
-PRICE:300
+> php while_ex2.php
+5
+4
+3
+2
+1
 ```
 
 ### ヒント
 
 ```
 <?php
-$price = 100;
-$count = 3;
-$total = ??? * ???;
-
-echo "PRICE:";
-echo ???;
-```
-
----
-
-## var_ex3.php
-
-次の実行結果となるようにPHPプログラムを作成してください。
-
-```
-> php var_ex3.php
-PRICE:540.0
-```
-
-### ヒント
-
-```
-<?php
-$price = 100;
-$count = 5;
-$tax = 1.08;
+$i = 5;
 
 // TODO
 ```
 
 ---
 
-## var_ex4.php
-
-四角形の面積を求めるプログラムを作成します。
+## while_ex3.php
 
 次の実行結果となるようにPHPプログラムを作成してください。
 
+### 実行結果
+
 ```
-> php var_ex4.php
-width:10
-height:20
-area:200
+> php while_ex3.php
+0
+2
+4
+6
+8
 ```
 
 ### ヒント
 
 ```
 <?php
-$width = 10;
-$height = 20;
-$area = ??? * ???;
-
-echo "width:" . ???;
-echo PHP_EOL;
-echo "height:" . ???;
-echo PHP_EOL;
-echo "area:" . ???;
-echo PHP_EOL;
-```
-
----
-
-## var_ex5.php
-
-三角形の面積を求めるプログラムを作成します。
-
-次の実行結果となるようにPHPプログラムを作成してください。
-
-```
-> php var_ex5.php
-w:10
-h:20
-a:100
-```
-
-### ヒント
-
-```
-<?php
-$w = 10;
-$h = 20;
+$i = 0;
 
 // TODO
 ```
 
 ---
 
-## var_ex6.php
-
-直方体の面積を求めるプログラムを作成します。
+## while_ex4.php
 
 次の実行結果となるようにPHPプログラムを作成してください。
 
+### 実行結果
+
 ```
-> php var_ex6.php
-x:10
-y:20
-z:30
-volume:6000
+> php while_ex4.php
+1
+3
+5
+7
+9
 ```
 
 ### ヒント
 
 ```
 <?php
-$x = 10;
-$y = 20;
-$z = 30;
+$i = 0;
 
+// TODO
+```
+
+---
+
+
+## while_ex5.php
+
+1〜9までの合計値を表示するプログラムを作成します。
+
+次の実行結果となるようにPHPプログラムを作成してください。
+
+### 実行結果
+
+```
+> php while_ex5.php
+45
+```
+
+### ヒント
+
+```
+<?php
+$i = 1;
+$total = 0;
+while ($i < 10) {
+  ??? = ??? + ???;
+  $i++;
+}
+echo $total;
+```
+
+---
+
+
+## while_ex6.php
+
+1〜9までの中で偶数のみの合計値を表示するプログラムを作成します。
+
+次の実行結果となるようにPHPプログラムを作成してください。
+
+### 実行結果
+
+```
+> php while_ex6.php
+20
+```
+
+### ヒント
+
+```
+<?php
+$i = 1;
+$total = 0;
+// TODO
+```
+
+---
+
+## while_ex7.php
+
+1〜9までの中で奇数のみの合計値を表示するプログラムを作成します。
+
+次の実行結果となるようにPHPプログラムを作成してください。
+
+### 実行結果
+
+```
+> php while_ex6.php
+20
+```
+
+### ヒント
+
+```
+<?php
+$i = 1;
+$total = 0;
 // TODO
 ```
 
