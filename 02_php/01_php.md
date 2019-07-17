@@ -32,4 +32,4 @@ Hello World
 
 ### 演習
 
-+ [エクササイズ - PHPとは](../ex/01_php_ex.md)
++ [エクササイズ - PHPとは](ex/01_php_ex.md)
