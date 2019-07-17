@@ -29,7 +29,7 @@ Error
 
 ### ヒント
 
-```
+```php
 <?php
 $id = "Alice";
 
@@ -71,7 +71,7 @@ Error
 
 ### ヒント
 
-```
+```php
 <?php
 $id = "Alice";
 
@@ -114,7 +114,7 @@ Error
 
 ### ヒント
 
-```
+```php
 <?php
 $id = "Alice";
 $password = "pass";
@@ -151,7 +151,7 @@ PRICE:300
 
 ### ヒント
 
-```
+```php
 <?php
 $price = 500;
 
@@ -187,7 +187,7 @@ PRICE:300
 
 ### ヒント
 
-```
+```php
 <?php
 $price = 2000;
 
@@ -228,7 +228,7 @@ POINT:3
 
 ### ヒント
 
-```
+```php
 <?php
 $price = 3000;
 $gold = true;
