@@ -51,3 +51,9 @@ echo $count;
 + [演算子](https://www.php.net/manual/ja/language.operators.php)
 + [定義済みの定数](https://www.php.net/manual/ja/reserved.constants.php)
 + [echo](https://www.php.net/manual/ja/function.echo.php)
+
+---
+
+### 演習
+
++ [エクササイズ - 変数と演算子](../ex/02_php_ex.md)

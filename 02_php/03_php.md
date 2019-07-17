@@ -119,3 +119,10 @@ Yes
 + [論理型(boolean)](https://www.php.net/manual/ja/language.types.boolean.php)
 + [比較演算子](https://www.php.net/manual/ja/language.operators.comparison.php)
 + [論理演算子](https://www.php.net/manual/ja/language.operators.logical.php)
+
+
+---
+
+### 演習
+
++ [エクササイズ - 制御構文 - 分岐構造 - if文](../ex/03_php_ex.md)

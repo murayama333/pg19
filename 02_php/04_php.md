@@ -85,3 +85,9 @@ while ($i <= 9) {
 + [while](https://www.php.net/manual/ja/control-structures.while.php)
 + [break](https://www.php.net/manual/ja/control-structures.break.php)
 + [continue](https://www.php.net/manual/ja/control-structures.continue.php)
+
+---
+
+### 演習
+
++ [エクササイズ - 制御構文 - 反復構造 - while文](../ex/04_php_ex.md)
