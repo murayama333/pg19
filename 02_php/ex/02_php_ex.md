@@ -49,7 +49,7 @@ echo ???;
 
 ```
 > php var_ex3.php
-PRICE:540.0
+PRICE:540
 ```
 
 ### ヒント

@@ -155,7 +155,10 @@ PRICE:300
 <?php
 $price = 500;
 
-// TODO
+echo "PRICE:$price" . PHP_EOL;
+if (???) {
+  echo "POINT:1" . PHP_EOL;
+}
 ```
 
 ---
@@ -213,8 +216,8 @@ $price = 2000;
 ```
 > php if_ex6.php
 PRICE:3000
+MEMBER:GOLD
 POINT:6
-GOLD MEMBER:YES
 ```
 
 #### 通常会員が3000円購入した場合
@@ -222,8 +225,25 @@ GOLD MEMBER:YES
 ```
 > php if_ex6.php
 PRICE:3000
-GOLD MEMBER:NO
+MEMBER:NORMAL
 POINT:3
+```
+
+#### GOLD会員が500円購入した場合
+
+```
+> php if_ex6.php
+PRICE:500
+MEMBER:GOLD
+POINT:1
+```
+
+#### 通常会員が500円購入した場合
+
+```
+> php if_ex6.php
+PRICE:500
+MEMBER:NORMAL
 ```
 
 ### ヒント
