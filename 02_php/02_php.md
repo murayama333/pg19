@@ -19,6 +19,7 @@ echo $total;
 
 ```
 > php var1.php
+TOTAL PRICE
 1000
 ```
 

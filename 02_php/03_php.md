@@ -46,6 +46,7 @@ Bad
 ### if3.php
 
 ```php
+<?php
 $point = 100;
 
 if ($point >= 90) {

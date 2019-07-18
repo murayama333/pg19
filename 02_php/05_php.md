@@ -1,12 +1,10 @@
-# 制御構文 - 反復構造 - while文
+# 制御構文 - 反復構造 - for文
 
-### while1.php
+### for1.php
 
 ```php
 <?php
-$count = 0;
-
-while ($count < 5) {
+for ($i = 0; $i < 5; $i++) {
   echo "*";
   $count++;
 }
@@ -15,7 +13,7 @@ while ($count < 5) {
 ### 実行
 
 ```
-> php while1.php
+> php for1.php
 *****
 ```
 
@@ -26,41 +24,33 @@ while ($count < 5) {
 
 ```php
 <?php
-$i = 1;
-
 $total = 0;
-while ($i <= 10) {
+for ($i = 1; $i <= 10; $i++) {
   $total = $total + $i;
-  $i++;
 }
-
 echo $total;
 ```
 
 ### 実行
 
 ```
-> php while2.php
+> php for2.php
 55
 ```
 
 ---
 
 
-### while3.php
+### for3.php
 
 ```php
 <?php
-$i = 1;
-while ($i <= 9) {
-  $j = 1;
-  while ($j <= 9) {
+for ($i = 1; $i <= 9; $i++) {
+  for ($j = 1; $j <= 9; $j++) {
     echo $i * $j;
     echo " ";
-    $j++;
   }
   echo PHP_EOL;
-  $i++;
 }
 ```
 
@@ -83,12 +73,10 @@ while ($i <= 9) {
 
 ### 考察
 
-+ [while](https://www.php.net/manual/ja/control-structures.while.php)
-+ [break](https://www.php.net/manual/ja/control-structures.break.php)
-+ [continue](https://www.php.net/manual/ja/control-structures.continue.php)
++ [for](https://www.php.net/manual/ja/control-structures.for.php)
 
 ---
 
 ### 演習
 
-+ [エクササイズ - 制御構文 - 反復構造 - while文](ex/04_php_ex.md)
++ [エクササイズ - 制御構文 - 反復構造 - while文](ex/05_php_ex.md)
