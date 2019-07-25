@@ -19,7 +19,7 @@ for ($i = 0; $i < 5; $i++) {
 ---
 
 
-### for.php
+### for2.php
 
 ```php
 <?php
