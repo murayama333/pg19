@@ -118,4 +118,4 @@ PHP Hypertext Preprocessor
 
 ### 演習
 
-+ [エクササイズ - 配列 - 文字列関数](ex/08_php_ex.md)
++ [エクササイズ - 関数 - 文字列関数](ex/08_php_ex.md)
