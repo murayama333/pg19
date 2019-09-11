@@ -191,7 +191,6 @@ Array
 
 ```php
 <?php
-<?php
 $cards1 = ["J", "Q", "K", "A"];
 $cards2 = ["Q", "K", "A"];
 ???
