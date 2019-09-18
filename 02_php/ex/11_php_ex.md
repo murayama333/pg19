@@ -237,7 +237,7 @@ echo calc_total($file);
 
 ## func_ex8.php
 
-テキストエディタでsale.txtファイルを作成します。
+テキストエディタでsale.csvファイルを作成します。
 
 #### sale.csv
 
