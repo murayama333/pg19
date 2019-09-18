@@ -1,0 +1,11 @@
+<?php
+$file = "fruits.csv";
+$lines = file($file, FILE_IGNORE_NEW_LINES);
+$total = 0;
+foreach ($lines as $line) {
+    $items = explode(",", $line);
+    if ($items[2] == "yellow") {
+        $total = $total + $items[1];
+    }
+}
+echo "Total(yellow): " . $total . PHP_EOL;
