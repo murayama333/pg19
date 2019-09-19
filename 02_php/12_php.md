@@ -64,16 +64,8 @@ if ($search) {
 ### 実行
 
 ```
-> php algo1.php
-Array
-(
-    [0] => 52
-    [1] => 60
-    [2] => 67
-    [3] => 73
-    [4] => 74
-    [5] => 95
-)
+> php algo02.php 95
+Found
 ```
 
 ---
@@ -113,6 +105,14 @@ if ($search) {
 
 > 2分探索を行うには予め配列を並び替えて置く必要があります。
 
+### 実行
+
+```
+> php algo03.php 95
+Found
+```
+
+
 ---
 
 ### algo4.php
@@ -134,6 +134,14 @@ for ($i = 0; $i < count($array); $i++) {
 
 echo $total . PHP_EOL;
 ```
+
+### 実行
+
+```
+> php algo04.php 95
+353
+```
+
 
 ---
 
