@@ -1,3 +1,3 @@
-Total(Row):6
-Total(Row):150
-Total(Row):340
+Total(Row): 6
+Total(Row): 150
+Total(Row): 340

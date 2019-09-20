@@ -7,4 +7,4 @@ for ($i = 0; $i < count($array); $i++) {
 }
 $mean = $total / count($array);
 
-echo "Mean:" . $mean . PHP_EOL;
+echo "Mean: " . $mean . PHP_EOL;

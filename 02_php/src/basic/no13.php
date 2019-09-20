@@ -7,4 +7,4 @@ for($i = 0; $i < count($array); $i++){
     $total = $total + $array[$i][$j];
   }
 }
-echo "Total:" . $total . PHP_EOL;
+echo "Total: " . $total . PHP_EOL;
