@@ -4,6 +4,7 @@ define("INPUT_MESSAGE", "Input command > ");
 define("COMMAND_ERROR_MESSAGE", "Command Error!" . PHP_EOL);
 define("FILE_ERROR_MESSAGE", "File Error!" . PHP_EOL);
 define("END_MESSAGE", "Bye!" . PHP_EOL);
+define("CONFIRM_MESSAGE", "Are you sure? (yes) > ");
 
 function input()
 {
@@ -14,7 +15,7 @@ function input()
   return $result;
 }
 
-function get_notes()
+function get_notes($reverse=false)
 {
   $fp = @fopen(NOTE_FILE, "r");
   if ($fp === false) {
@@ -27,6 +28,9 @@ function get_notes()
     $note = fgetcsv($fp);
   }
   fclose($fp);
+  if ($reverse) {
+    $notes = array_reverse($notes);
+  }
   return $notes;
 }
 
@@ -34,7 +38,8 @@ function create_note($content)
 {
   $notes = get_notes();
   $id = get_new_note_id($notes);
-  $notes[] = [$id, $content];
+  $date = date("Y-m-d H:i:s");
+  $notes[] = [$id, $content, $date];
   save_notes($notes);
 }
 
@@ -56,7 +61,8 @@ function update_note($id, $content)
   $save_notes = [];
   foreach ($notes as $note) {
     if ($id === $note[0]) {
-      $save_notes[] = [$id, $content];
+      $date = date("Y-m-d H:i:s");
+      $save_notes[] = [$id, $content, $date];
     } else {
       $save_notes[] = $note;
     }
@@ -95,34 +101,44 @@ while (true) {
     continue;
   }
 
- if ($commands[0] === "list") {
-    if (count($commands) !== 1) {
+ if ($commands[0] === "list" || $commands[0] === "l") {
+    if (count($commands) > 2
+        || (count($commands) === 2 && $commands[1] !== "reverse")) {
       echo COMMAND_ERROR_MESSAGE;
       continue;
     }
-    $notes = get_notes();
+    $reverse = count($commands) === 2 && $commands[1] === "reverse";
+    $notes = get_notes($reverse);
     foreach ($notes as $note) {
-      echo $note[0] . ":" . $note[1] . PHP_EOL;
+      echo $note[0] . ":" . $note[1] . " (" . $note[2] . ")" . PHP_EOL;
     }
-  } else if ($commands[0] === "create") {
+  } else if ($commands[0] === "create" || $commands[0] === "c") {
+    if (count($commands) < 2) {
+      echo COMMAND_ERROR_MESSAGE;
+      continue;
+    }
+    $content = implode(" ", array_slice($commands, 1));
+    create_note($content);
+  } else if ($commands[0] === "delete" || $commands[0] === "d") {
     if (count($commands) !== 2) {
       echo COMMAND_ERROR_MESSAGE;
       continue;
     }
-    create_note($commands[1]);
-  } else if ($commands[0] === "delete") {
-    if (count($commands) !== 2) {
+    echo CONFIRM_MESSAGE;
+    $confirm = input();
+    if (count($confirm) !== 1 || $confirm[0] !== "yes") {
       echo COMMAND_ERROR_MESSAGE;
       continue;
     }
     delete_note($commands[1]);
-  } else if ($commands[0] === "update") {
-    if (count($commands) !== 3) {
+  } else if ($commands[0] === "update" || $commands[0] === "u") {
+    if (count($commands) < 3) {
       echo COMMAND_ERROR_MESSAGE;
       continue;
     }
-    update_note($commands[1], $commands[2]);
-  } else if ($commands[0] === "quit") {
+    $content = implode(" ", array_slice($commands, 2));
+    update_note($commands[1], $content);
+  } else if ($commands[0] === "quit" || $commands[0] === "q") {
       if (count($commands) !== 1) {
         echo COMMAND_ERROR_MESSAGE;
         continue;
