@@ -7,7 +7,11 @@ define("END_MESSAGE", "Bye!" . PHP_EOL);
 
 function input()
 {
-  return explode(" ", trim(fgets(STDIN)));
+  $result = explode(" ", trim(fgets(STDIN)));
+  if (feof(STDIN)) {
+    return ["quit"];
+  }
+  return $result;
 }
 
 function get_notes()
@@ -125,5 +129,8 @@ while (true) {
       }
       echo END_MESSAGE;
       break;
+  } else {
+    echo COMMAND_ERROR_MESSAGE;
+    continue;
   }
 }
