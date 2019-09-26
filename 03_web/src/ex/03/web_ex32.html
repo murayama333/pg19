@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function sum(number){
+      var total = 0;
+      for (var i = 1; i <= number; i++) {
+        total = total + i;
+      }
+      alert(total);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="sum(10)">sum 1..10</button>
+  <button onclick="sum(100)">sum 1..100</button>
+</body>
+</html>

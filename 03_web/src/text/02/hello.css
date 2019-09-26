@@ -1,0 +1,12 @@
+div {
+  font-size: 24px;
+  color: red;
+  background-color: #DDDDDD;
+  padding: 60px;
+  margin: 30px;
+  border: solid 1px grey;
+}
+
+span {
+  background-color: #00FF00;
+}
