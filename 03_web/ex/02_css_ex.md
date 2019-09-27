@@ -49,13 +49,13 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello CSS</h1>
-  <div>
-    Hello HTML
-  </div>
-  <div>
-    Hello <span>PHP</span>
-  </div>
+  <h1>What to make</h1>
+  <p>
+    In the case of supervised learning, for example in the case of image recognition, it is useful to have a dataset that can be used for immediate learning, such as the MNIST dataset, simple classification problems, and in the case of clustering the iris dataset.
+  </p>
+  <p>
+    In Reinforcement Learning, it's a little bigger framework than a data set, so is it better for the environment? Using OpenAI Gym, you can start reinforcement learning on subjects such as inverted pendulum (CartPole), space invaders, and block breaking.
+  </p>
 </body>
 </html>
 ```
@@ -82,13 +82,13 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello CSS</h1>
-  <div>
-    Hello HTML
-  </div>
-  <div>
-    Hello <span>PHP</span>
-  </div>
+  <h1>What to make</h1>
+  <p>
+    In the case of supervised learning, for example in the case of image recognition, it is useful to have a dataset that can be used for immediate learning, such as the MNIST dataset, simple classification problems, and in the case of clustering the iris dataset.
+  </p>
+  <p>
+    In Reinforcement Learning, it's a little bigger framework than a data set, so is it better for the environment? Using OpenAI Gym, you can start reinforcement learning on subjects such as inverted pendulum (CartPole), space invaders, and block breaking.
+  </p>
 </body>
 </html>
 ```
