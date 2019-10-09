@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div id="page">
+  <h1>PHP Programming</h1>
+  <h2>while statement</h2>
+  <p>Let's look at the while statement that is one of the array structures. The while statement is a syntax that defines a repetitive structure. Describe the conditional expression in () as shown below, and the processing to be executed when the condition is satisfied in {}.</p>
+
+<pre>while (Conditional expression) {
+  // Iteration
+}</pre>
+
+  <h2>loop1.php</h2>
+
+  <p>
+    The following program (loop1.php) outputs 1,2,3 to the screen.
+  </p>
+
+
+<pre>&lt;?php
+$i = 1;
+while ($i < 4) {
+  echo $i . PHP_EOL;
+  $i++;
+}</pre>
+
+  <h3>Terminal</h3>
+  <img src="loop1.png" alt="terminal">
+
+  <h3>Iteration</h3>
+  <table border="1">
+    <tr>
+      <th>$i</th>
+      <th>$i &gt; 3</th>
+      <th>Iteration</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>true</td>
+      <td>Output 1. Increment $i.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>true</td>
+      <td>Output 2. Increment $i.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>true</td>
+      <td>Output 3. Increment $i.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>false</td>
+      <td>End iteration.</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
