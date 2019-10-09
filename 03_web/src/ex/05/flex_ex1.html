@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style media="screen">
+  * {
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: #ddd;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  footer {
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  div {
+    flex: 1;
+    display: flex;
+  }
+
+  article {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  nav, aside {
+    background-color: #ddd;
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    order: -1;
+  }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <div>
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>
+</html>

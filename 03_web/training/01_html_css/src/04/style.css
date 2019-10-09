@@ -1,0 +1,48 @@
+#page {
+  width: 80%;
+  margin: 0 auto 5rem;
+}
+
+h1 {
+  background-color: #304C76;
+  color: white;
+  padding: 1.6rem;
+}
+
+h2 {
+  padding: 1rem 0;
+  border-bottom: solid 2px #343434;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+pre {
+  background-color: #343434;
+  color: white;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 520px;
+}
+
+table tr th {
+  padding: 1rem;
+  background-color: #343434;
+  color: white;
+}
+
+table tr td {
+  padding: 0.8rem;
+}
+
+img {
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 520px;
+}
