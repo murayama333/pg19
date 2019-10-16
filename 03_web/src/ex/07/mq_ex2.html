@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid gray;
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    .row div {
+      flex: 1;
+    }
+
+    @media only screen and (max-width:600px) {
+      .row {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+  </div>
+  <div class="row">
+    <div class="one">4</div>
+    <div class="two">5</div>
+    <div class="three">6</div>
+  </div>
+</body>
+</html>

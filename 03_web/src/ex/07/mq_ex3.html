@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;;
+    }
+    
+    th, td {
+      padding: 10px 20px;
+    }
+
+    ul {
+      display: none;
+    }
+
+    @media only screen and (max-width:600px) {
+      table {
+        display: none;
+      }
+
+      ul {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <th>NO</th>
+      <th>NAME</th>
+      <th>DATE</th>
+      <th>PRICE</th>
+    </tr>
+    <tr>
+      <td>0000003</td>
+      <td>Super Memory</td>
+      <td>2019/10/15 12:34:56</td>
+      <td>5,0000</td>
+    </tr>
+    <tr>
+      <td>0000002</td>
+      <td>Hyper Mouse</td>
+      <td>2019/10/13 12:34:56</td>
+      <td>2,000</td>
+    </tr>
+    <tr>
+      <td>0000001</td>
+      <td>Great Keyboard</td>
+      <td>2019/10/11 12:34:56</td>
+      <td>30,000</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>Super Memory</li>
+    <li>Hyper Mouse</li>
+    <li>Great Keyboard</li>
+  </ul>
+</body>
+</html>
