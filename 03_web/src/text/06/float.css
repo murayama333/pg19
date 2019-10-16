@@ -1,0 +1,23 @@
+div {
+  border: 1px solid gray;
+}
+
+.header {
+  background-color: #aaa;
+}
+
+.sidebar {
+  background-color: #ddd;
+  float: left;
+  width: 200px;
+  height: 400px;
+}
+
+.main {
+  background-color: #eee;
+}
+
+.footer {
+  background-color: #bbb;
+  clear: both;
+}

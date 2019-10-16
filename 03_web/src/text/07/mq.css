@@ -1,0 +1,18 @@
+h1 {
+  color: red;
+  font-size: 48px;
+}
+
+@media only screen and (max-width:800px) {
+  h1 {
+    color: green;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  h1 {
+    color: blue;
+    font-size: 12px;
+  }
+}
