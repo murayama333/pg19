@@ -21,7 +21,7 @@
 
 ### sample.png
 
-![](src/ex/06/img/sample.png)
+![](src/text/06/img/sample.png)
 
 > 右クリックのメニューから`sample.png`という名前で保存します。
 
