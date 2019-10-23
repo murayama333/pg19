@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ex8</h1>
+  <hr>
+  <script type="text/javascript">
+    var report = {
+                  "scores": [90, 80, 70],
+                  "sum": function() {
+                    var total = 0;
+                    for (var i = 0; i < this.scores.length; i++) {
+                      total = total + this.scores[i];
+                    }
+                    return total;
+                  }
+                };
+
+    document.write("<h1>Report</h1>");
+    document.write("sum: " + report.sum() + "<br>");
+  </script>
+</body>
+</html>

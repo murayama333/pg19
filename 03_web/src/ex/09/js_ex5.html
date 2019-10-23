@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ex5</h1>
+  <hr>
+  <script type="text/javascript">
+    function search(array, target) {
+      var found = false;
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] == target) {
+          found = true;
+          break;
+        }
+      }
+      return found;
+    }
+
+    var points = [6, 8, 3, 4, 7, 2];
+    var target = 9;
+    var result = search(points, target);
+    if (result == true) {
+      document.write("<h1>" + target + " is found</h1>");
+    } else {
+      document.write("<h1>" + target + " is not found</h1>");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>object, property, method, array</h1>
+  <hr>
+  <script type="text/javascript">
+    function greet() {
+      return "My name is " + this.name + ".";
+    }
+
+    var people = [
+      {"name": "Tanaka", "age": 20, greet: greet},
+      {"name": "Suzuki", "age": 30, greet: greet},
+      {"name": "Yamada", "age": 40, greet: greet}
+    ];
+
+    for (var i = 0; i < people.length; i++) {
+      document.write("<h1>" + people[i].name + "</h1>");
+      document.write("<h1>" + people[i].age + "</h1>");
+      document.write("<h1>" + people[i].greet() + "</h1>");
+      document.write("<hr>");
+    }
+  </script>
+</body>
+</html>

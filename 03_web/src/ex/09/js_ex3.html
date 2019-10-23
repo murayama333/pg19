@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ex3</h1>
+  <hr>
+  <script type="text/javascript">
+    document.write("<ul>");
+    for (var i = 1; i <= 30; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        document.write("<li>FizzBuzz</li>");
+      } else if (i % 3 == 0) {
+        document.write("<li>Fizz</li>");
+      } else if (i % 5 == 0) {
+        document.write("<li>Buzz</li>");
+      } else {
+        document.write("<li>" + i + "</li>");
+      }
+    }
+    document.write("<ul>");
+  </script>
+</body>
+</html>
