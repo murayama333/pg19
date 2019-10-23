@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function onClickHandler() {
+      var divs = document.querySelectorAll(".row-1 .col-1,.row-2 .col-2,.row-3 .col-3");
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].style = "background-color: blue; color: white;";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Ex4</h1>
+  <button type="button" onclick="onClickHandler()">1-1,2-2,3-3</button>
+  <table border="1">
+    <tr class="row-1">
+      <td class="col-1">90</td>
+      <td class="col-2">80</td>
+      <td class="col-3">70</td>
+    </tr>
+    <tr class="row-2">
+      <td class="col-1">92</td>
+      <td class="col-2">94</td>
+      <td class="col-3">96</td>
+    </tr>
+    <tr class="row-3">
+      <td class="col-1">88</td>
+      <td class="col-2">82</td>
+      <td class="col-3">80</td>
+    </tr>
+  </table>
+</body>
+</html>

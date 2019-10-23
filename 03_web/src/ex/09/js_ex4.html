@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ex4</h1>
+  <hr>
+  <script type="text/javascript">
+    function max(array) {
+      var max = 0;
+      for (var i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+          max = array[i];
+        }
+      }
+      return max;
+    }
+
+    var points = [6, 8, 3, 4, 7, 2];
+    var result = max(points);
+    document.write("<h1>Max: " + result + "</h1>");
+  </script>
+</body>
+</html>

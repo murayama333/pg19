@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ex7</h1>
+  <hr>
+  <script type="text/javascript">
+    var scores = [
+      {"english": 90, "math": 80, "science": 70},
+      {"english": 92, "math": 94, "science": 96},
+      {"english": 88, "math": 82, "science": 80}
+    ];
+
+    document.write("<h1>Scores</h1>");
+    document.write("<table border=\"1\">");
+    for (var i = 0; i < scores.length; i++) {
+      document.write("<tr>");
+      document.write("<td>" + scores[i].english + "</td>");
+      document.write("<td>" + scores[i].math + "</td>");
+      document.write("<td>" + scores[i].science + "</td>");
+      document.write("</tr>");
+    }
+    document.write("</table>");
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>closure</h1>
+  <hr>
+  <script type="text/javascript">
+    var counter = function() {
+        var count = 0;
+        return function() {
+          count = count + 1;
+          return count;
+        }
+    }
+
+    var myCounter = counter();
+    document.write(myCounter() + "<br>");
+    document.write(myCounter() + "<br>");
+    document.write(myCounter() + "<br>");
+  </script>
+</body>
+</html>

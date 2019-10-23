@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>callback function</h1>
+  <hr>
+  <script type="text/javascript">
+    var world = function() {
+        document.write("<h1>World</h1>");
+    }
+
+    var hello = function(callback) {
+      document.write("<h1>Hello</h1>");
+      callback();
+    }
+
+    hello(world);
+  </script>
+</body>
+</html>

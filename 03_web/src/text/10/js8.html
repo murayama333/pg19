@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>object, property, method</h1>
+  <hr>
+  <script type="text/javascript">
+    var person = {
+                    "name": "Tanaka",
+                    "age": 20,
+                    "greet": function() {
+                      return "My name is " + this.name + ".";
+                    }
+                  };
+
+    document.write("<h1>" + person.name + "</h1>");
+    document.write("<h1>" + person.age + "</h1>");
+    document.write("<h1>" + person.greet() + "</h1>");
+  </script>
+</body>
+</html>

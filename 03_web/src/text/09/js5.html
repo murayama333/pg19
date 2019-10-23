@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>array, for, function</h1>
+  <hr>
+  <script type="text/javascript">
+    function sum(array) {
+      var total = 0;
+      for (var i = 0; i < array.length; i++) {
+        total += array[i];
+      }
+      return total;
+    }
+
+    var prices = [100, 200, 300];
+    var total = sum(prices);
+    document.write("<h1>Total: " + total  + "</h1>");
+  </script>
+</body>
+</html>

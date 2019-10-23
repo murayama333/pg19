@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>object, property, array</h1>
+  <hr>
+  <script type="text/javascript">
+    var people = [
+      {"name": "Tanaka", "age": 20},
+      {"name": "Suzuki", "age": 30},
+      {"name": "Yamada", "age": 40},
+    ];
+
+    for (var i = 0; i < people.length; i++) {
+      document.write("<h1>" + people[i].name + "</h1>");
+      document.write("<h1>" + people[i].age + "</h1>");
+      document.write("<hr>");
+    }
+  </script>
+</body>
+</html>

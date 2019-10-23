@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function onOddClickHandler() {
+      var divs = document.getElementsByClassName("odd");
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].style = "background-color: yellow;";
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <h1>document.getElementsByClassName</h1>
+  <button type="button" onclick="onOddClickHandler()">.odd</button>
+  <div id="d1" class="odd">one</div>
+  <div id="d2" class="even">two</div>
+  <div id="d3" class="odd">three</div>
+  <div id="d4" class="even">four</div>
+</body>
+</html>
