@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function addPanel() {
+      var main = document.querySelector("#main");
+
+      var panel = document.createElement("div");
+      panel.style = "width: 30px; height: 30px; background-color: blue;";
+      main.appendChild(panel);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="addPanel()">add</button>
+  <div id="main" style="display: flex;"></div>
+</body>
+</html>
