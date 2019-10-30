@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function addComment() {
+      var ol = document.querySelector("#comments");
+
+      var li = document.createElement("li");
+      li.innerHTML = "Hello World";
+      ol.appendChild(li);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="addComment()">add</button>
+  <ol id="comments"></ol>
+</body>
+</html>

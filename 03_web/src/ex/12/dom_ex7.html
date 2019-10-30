@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function addPanel() {
+      var main = document.querySelector("#main");
+      var myColor = document.querySelector("#my-color");
+
+      var panel = document.createElement("div");
+      panel.style = "width: 30px; height: 30px;"
+                    + "margin: 2px;"
+                    + "border-radius: 50%;"
+                    + "background-color: " + myColor.value + ";";
+      main.appendChild(panel);
+    }
+  </script>
+</head>
+<body>
+  <input type="color" id="my-color">
+  <button onclick="addPanel()">add</button>
+  <div id="main" style="display: flex;"></div>
+</body>
+</html>

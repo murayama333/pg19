@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function addComment() {
+      var comment = document.querySelector("#comment");
+      var name = document.querySelector("#name");
+
+      var table = document.querySelector("#comments");
+      var tr = document.createElement("tr");
+      var td1 = document.createElement("td");
+      td1.innerHTML = comment.value;
+      tr.appendChild(td1);
+
+      var td2 = document.createElement("td");
+      td2.innerHTML = name.value;
+      tr.appendChild(td2);
+
+      table.appendChild(tr);
+    }
+  </script>
+</head>
+<body>
+  <h1>document.createElement</h1>
+  <input type="text" id="comment" placeholder="comment">
+  <input type="text" id="name" placeholder="name">
+  <button onclick="addComment()">add</button>
+  <hr>
+  <table id="comments" border="1">
+    <tr>
+      <th>MESSAGE</th>
+      <th>NAME</th>
+    </tr>
+  </table>
+</body>
+</html>

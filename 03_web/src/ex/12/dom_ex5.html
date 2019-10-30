@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function addComment() {
+      var text = document.querySelector("#comment");
+      var ul = document.querySelector("#comments");
+
+      var li = document.createElement("li");
+      li.innerHTML = text.value;
+      ul.appendChild(li);
+      text.value = "";
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="comment">
+  <button onclick="addComment()">add</button>
+  <ul id="comments"></ul>
+</body>
+</html>

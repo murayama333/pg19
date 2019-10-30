@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function remove() {
+      var fruits = document.querySelector("#fruits");
+      var element = fruits.firstElementChild;
+      if (element != null) {
+        element.remove();
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="remove()">remove</button>
+  <ul id="fruits">
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Lemon</li>
+  </ul>
+</body>
+</html>
