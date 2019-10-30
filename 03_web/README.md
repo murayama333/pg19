@@ -14,3 +14,4 @@
   + [JavaScript - 基礎構文](09_js.md)
   + [JavaScript - オブジェクト](10_js.md)
   + [JavaScript - DOM - Part1](11_js.md)
+  + [JavaScript - DOM - Part2](12_js.md)
