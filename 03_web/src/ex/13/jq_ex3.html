@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+
+    $("#my-btn").click(function(e){
+      var val = $("#my-text").val();
+      var p = $("<p>");
+      p.text(val);
+      p.css("color", "red");
+      $("#main").append(p);
+      $("#my-text").val("");
+    });
+
+  });
+  </script>
+</head>
+<body>
+  <input type="text" id="my-text">
+  <button id="my-btn">show</button>
+  <div id="main"></div>
+</body>
+</html>
