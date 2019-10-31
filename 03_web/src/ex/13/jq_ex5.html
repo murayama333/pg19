@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+
+    $("#my-btn").click(function(e){
+      $("li.odd").css("color", "red").text("Hello");
+      $("li.even").css("color", "blue").text("World");
+    });
+
+  });
+  </script>
+</head>
+<body>
+  <button id="my-btn">change</button>
+  <ul>
+    <li class="odd">one</li>
+    <li class="even">two</li>
+    <li class="odd">three</li>
+    <li class="even">four</li>
+    <li class="odd">five</li>
+  </ul>
+</body>
+</html>

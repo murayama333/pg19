@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+
+      $("#my-text").keyup(function(e){
+        var val = $("#my-text").val();
+        $("#main").text(val);
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <input type="text" id="my-text">
+  <div id="main"></div>
+</body>
+</html>
