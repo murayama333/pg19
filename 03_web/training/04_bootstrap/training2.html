@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>売上管理システム</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">売上管理システム</a>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="card card-body bg-light">
+          <ul class="list-unstyled">
+            <li><a href="#">売上管理</a></li>
+            <li><a href="#">顧客管理</a></li>
+            <li><a href="#">拠点管理</a></li>
+            <li><a href="#">設定</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="card card-body bg-light">
+          <form action="#">
+            <div class="row">
+              <div class="form-group col-md-3">
+                <label for="userId">顧客ID</label>
+                <input type="text" name="userId" id="userId" class="form-control">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="userName">顧客名</label>
+                <input type="text" name="userName" id="userName" class="form-control">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="mail">メールアドレス</label>
+                <input type="mail" name="mail" id="mail" class="form-control">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="place">地域</label>
+                <select class="form-control" name="place" id="place">
+                  <option value="option">すべて</option>
+                  <option value="option">西日本</option>
+                  <option value="option">東日本</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group offset-md-10 col-md-2" style="text-align: right;">
+                <button type="submit" class="btn btn-primary">検索</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <hr>
+
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>顧客ID</th>
+            <th>顧客名</th>
+            <th>メールアドレス</th>
+            <th>地域</th>
+          </tr>
+          <tr>
+            <td>
+              0000001
+            </td>
+            <td>
+              田中一郎
+            </td>
+            <td>
+              user1@example.com
+            </td>
+            <td>
+              西日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000002
+            </td>
+            <td>
+              山田二郎
+            </td>
+            <td>
+              user2@example.com
+            </td>
+            <td>
+              東日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000003
+            </td>
+            <td>
+              鈴木三郎
+            </td>
+            <td>
+              user3@example.com
+            </td>
+            <td>
+              西日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000004
+            </td>
+            <td>
+              高木四郎
+            </td>
+            <td>
+              user4@example.com
+            </td>
+            <td>
+              東日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000005
+            </td>
+            <td>
+              吉田五朗
+            </td>
+            <td>
+              user5@example.com
+            </td>
+            <td>
+              西日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000006
+            </td>
+            <td>
+              高橋六郎
+            </td>
+            <td>
+              user6@example.com
+            </td>
+            <td>
+              東日本
+            </td>
+          </tr>
+          <tr>
+            <td>
+              0000007
+            </td>
+            <td>
+              伊藤七郎
+            </td>
+            <td>
+              user7@example.com
+            </td>
+            <td>
+              西日本
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
