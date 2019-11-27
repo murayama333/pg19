@@ -446,7 +446,7 @@ select s.name, d.name from staff s left outer join department d on s.department_
 ```
 
 
-#### 外部結合（右外部結合）
+#### 外部結合（右外部結合）
 
 ```sql
 select s.name, d.name from staff s right outer join department d on s.department_id = d.id;
