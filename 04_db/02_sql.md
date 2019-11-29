@@ -19,19 +19,20 @@
 
 
 ### staffテーブル
+
 ```
 +----+-----------+------------+------------+------+------------+---------------+
 | id | name      | job        | hire_date  | sal  | manager_id | department_id |
 +----+-----------+------------+------------+------+------------+---------------+
 |  1 | Sarah     | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda    | Engineer   | 2016-04-01 | 1200 |          1 |             2 |
-|  3 | Michael   | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
+|  2 | Amanda    | Engineer   | 2016-04-01 | 1200 |          1 |             1 |
+|  3 | Michael   | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
 |  4 | Robert    | Engineer   | 2017-04-01 |  800 |          1 |             1 |
-|  5 | James     | Engineer   | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James     | Engineer   | 2017-04-01 | 1500 |          1 |             1 |
 |  6 | Nicole    | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 |  7 | John      | Marketer   | 2018-04-01 |  800 |          2 |          NULL |
-|  8 | Elizabeth | Sales      | 2018-04-01 |  800 |          2 |             1 |
-|  9 | Joseph    | Sales      | 2018-10-01 |  700 |          2 |             2 |
+|  8 | Elizabeth | Sales      | 2018-04-01 |  800 |          3 |             2 |
+|  9 | Joseph    | Sales      | 2018-10-01 |  700 |          3 |             2 |
 +----+-----------+------------+------------+------+------------+---------------+
 ```
 
@@ -96,14 +97,14 @@ insert into department(id, name) values(4, 'Legal');
 
 ```sql
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(1, 'Sarah', 'Engineer', '2016-04-01', 1500, null, 1);
-insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(2, 'Amanda', 'Engineer', '2016-04-01', 1200, 1, 2);
-insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(3, 'Michael', 'Sales', '2016-10-01', 1000, null, 1);
+insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(2, 'Amanda', 'Engineer', '2016-04-01', 1200, 1, 1);
+insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(3, 'Michael', 'Sales', '2016-10-01', 1000, null, 2);
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(4, 'Robert', 'Engineer', '2017-04-01', 800, 1, 1);
-insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(5, 'James', 'Engineer', '2017-04-01', 1500, 1, 2);
+insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(5, 'James', 'Engineer', '2017-04-01', 1500, 1, 1);
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(6, 'Nicole', 'Accountant', '2017-04-01', 1000, null, 3);
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(7, 'John', 'Marketer', '2018-04-01', 800, 2, null);
-insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(8, 'Elizabeth', 'Sales', '2018-04-01', 800, 2, 1);
-insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(9, 'Joseph', 'Sales', '2018-10-01', 700, 2, 2);
+insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(8, 'Elizabeth', 'Sales', '2018-04-01', 800, 3, 2);
+insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(9, 'Joseph', 'Sales', '2018-10-01', 700, 3, 2);
 ```
 
 ---
@@ -121,14 +122,14 @@ select * from staff;
 | id | name      | job        | hire_date  | sal  | manager_id | department_id |
 +----+-----------+------------+------------+------+------------+---------------+
 |  1 | Sarah     | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda    | Engineer   | 2016-04-01 | 1200 |          1 |             2 |
-|  3 | Michael   | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
+|  2 | Amanda    | Engineer   | 2016-04-01 | 1200 |          1 |             1 |
+|  3 | Michael   | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
 |  4 | Robert    | Engineer   | 2017-04-01 |  800 |          1 |             1 |
-|  5 | James     | Engineer   | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James     | Engineer   | 2017-04-01 | 1500 |          1 |             1 |
 |  6 | Nicole    | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 |  7 | John      | Marketer   | 2018-04-01 |  800 |          2 |          NULL |
-|  8 | Elizabeth | Sales      | 2018-04-01 |  800 |          2 |             1 |
-|  9 | Joseph    | Sales      | 2018-10-01 |  700 |          2 |             2 |
+|  8 | Elizabeth | Sales      | 2018-04-01 |  800 |          3 |             2 |
+|  9 | Joseph    | Sales      | 2018-10-01 |  700 |          3 |             2 |
 +----+-----------+------------+------------+------+------------+---------------+
 ```
 
@@ -191,9 +192,9 @@ select * from staff where sal >= 1000;
 | id | name    | job        | hire_date  | sal  | manager_id | department_id |
 +----+---------+------------+------------+------+------------+---------------+
 |  1 | Sarah   | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             2 |
-|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
-|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             2 |
+|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             1 |
+|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
+|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             1 |
 |  6 | Nicole  | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 +----+---------+------------+------------+------+------------+---------------+
 ```
@@ -209,8 +210,8 @@ select * from staff where sal >= 1000 and job = 'engineer';
 | id | name   | job      | hire_date  | sal  | manager_id | department_id |
 +----+--------+----------+------------+------+------------+---------------+
 |  1 | Sarah  | Engineer | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             2 |
-|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             2 |
+|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             1 |
+|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             1 |
 +----+--------+----------+------------+------+------------+---------------+
 ```
 
@@ -225,10 +226,10 @@ select * from staff where hire_date >= '2016-04-01' and hire_date <= '2017-04-01
 | id | name    | job        | hire_date  | sal  | manager_id | department_id |
 +----+---------+------------+------------+------+------------+---------------+
 |  1 | Sarah   | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             2 |
-|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
+|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             1 |
+|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
 |  4 | Robert  | Engineer   | 2017-04-01 |  800 |          1 |             1 |
-|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             1 |
 |  6 | Nicole  | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 +----+---------+------------+------------+------+------------+---------------+
 ```
@@ -244,10 +245,10 @@ select * from staff where hire_date between '2016-04-01' and '2017-04-01';
 | id | name    | job        | hire_date  | sal  | manager_id | department_id |
 +----+---------+------------+------------+------+------------+---------------+
 |  1 | Sarah   | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             2 |
-|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
+|  2 | Amanda  | Engineer   | 2016-04-01 | 1200 |          1 |             1 |
+|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
 |  4 | Robert  | Engineer   | 2017-04-01 |  800 |          1 |             1 |
-|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James   | Engineer   | 2017-04-01 | 1500 |          1 |             1 |
 |  6 | Nicole  | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 +----+---------+------------+------------+------+------------+---------------+
 ```
@@ -264,7 +265,7 @@ select * from staff where manager_id is null;
 | id | name    | job        | hire_date  | sal  | manager_id | department_id |
 +----+---------+------------+------------+------+------------+---------------+
 |  1 | Sarah   | Engineer   | 2016-04-01 | 1500 |       NULL |             1 |
-|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             1 |
+|  3 | Michael | Sales      | 2016-10-01 | 1000 |       NULL |             2 |
 |  6 | Nicole  | Accountant | 2017-04-01 | 1000 |       NULL |             3 |
 +----+---------+------------+------------+------+------------+---------------+
 ```
@@ -280,9 +281,9 @@ select * from staff where name like 'J%';
 +----+--------+----------+------------+------+------------+---------------+
 | id | name   | job      | hire_date  | sal  | manager_id | department_id |
 +----+--------+----------+------------+------+------------+---------------+
-|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             1 |
 |  7 | John   | Marketer | 2018-04-01 |  800 |          2 |          NULL |
-|  9 | Joseph | Sales    | 2018-10-01 |  700 |          2 |             2 |
+|  9 | Joseph | Sales    | 2018-10-01 |  700 |          3 |             2 |
 +----+--------+----------+------------+------+------------+---------------+
 ```
 
@@ -297,7 +298,7 @@ select * from staff where name like '_o____';
 | id | name   | job      | hire_date  | sal | manager_id | department_id |
 +----+--------+----------+------------+-----+------------+---------------+
 |  4 | Robert | Engineer | 2017-04-01 | 800 |          1 |             1 |
-|  9 | Joseph | Sales    | 2018-10-01 | 700 |          2 |             2 |
+|  9 | Joseph | Sales    | 2018-10-01 | 700 |          3 |             2 |
 +----+--------+----------+------------+-----+------------+---------------+
 ```
 
@@ -313,9 +314,9 @@ select * from staff where job = 'engineer' order by sal;
 | id | name   | job      | hire_date  | sal  | manager_id | department_id |
 +----+--------+----------+------------+------+------------+---------------+
 |  4 | Robert | Engineer | 2017-04-01 |  800 |          1 |             1 |
-|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             2 |
+|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             1 |
 |  1 | Sarah  | Engineer | 2016-04-01 | 1500 |       NULL |             1 |
-|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             1 |
 +----+--------+----------+------------+------+------------+---------------+
 ```
 
@@ -330,8 +331,8 @@ select * from staff where job = 'engineer' order by sal desc;
 | id | name   | job      | hire_date  | sal  | manager_id | department_id |
 +----+--------+----------+------------+------+------------+---------------+
 |  1 | Sarah  | Engineer | 2016-04-01 | 1500 |       NULL |             1 |
-|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             2 |
-|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             2 |
+|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             1 |
+|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             1 |
 |  4 | Robert | Engineer | 2017-04-01 |  800 |          1 |             1 |
 +----+--------+----------+------------+------+------------+---------------+
 ```
@@ -346,10 +347,10 @@ select * from staff where job = 'engineer' order by hire_date, sal;
 +----+--------+----------+------------+------+------------+---------------+
 | id | name   | job      | hire_date  | sal  | manager_id | department_id |
 +----+--------+----------+------------+------+------------+---------------+
-|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             2 |
+|  2 | Amanda | Engineer | 2016-04-01 | 1200 |          1 |             1 |
 |  1 | Sarah  | Engineer | 2016-04-01 | 1500 |       NULL |             1 |
 |  4 | Robert | Engineer | 2017-04-01 |  800 |          1 |             1 |
-|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James  | Engineer | 2017-04-01 | 1500 |          1 |             1 |
 +----+--------+----------+------------+------+------------+---------------+
 ```
 
@@ -395,7 +396,7 @@ select * from staff where sal = (select max(sal) from staff);
 | id | name  | job      | hire_date  | sal  | manager_id | department_id |
 +----+-------+----------+------------+------+------------+---------------+
 |  1 | Sarah | Engineer | 2016-04-01 | 1500 |       NULL |             1 |
-|  5 | James | Engineer | 2017-04-01 | 1500 |          1 |             2 |
+|  5 | James | Engineer | 2017-04-01 | 1500 |          1 |             1 |
 +----+-------+----------+------------+------+------------+---------------+
 ```
 
@@ -404,72 +405,72 @@ select * from staff where sal = (select max(sal) from staff);
 #### 内部結合
 
 ```sql
-select s.name, d.name from staff s inner join department d on s.department_id = d.id;
+select s.name, s.job, d.name from staff s inner join department d on s.department_id = d.id;
 ```
 
 ```
-+-----------+-------------+
-| name      | name        |
-+-----------+-------------+
-| Sarah     | Development |
-| Amanda    | Sales       |
-| Michael   | Development |
-| Robert    | Development |
-| James     | Sales       |
-| Nicole    | Accounting  |
-| Elizabeth | Development |
-| Joseph    | Sales       |
-+-----------+-------------+
++-----------+------------+-------------+
+| name      | job        | name        |
++-----------+------------+-------------+
+| Sarah     | Engineer   | Development |
+| Amanda    | Engineer   | Development |
+| Michael   | Sales      | Sales       |
+| Robert    | Engineer   | Development |
+| James     | Engineer   | Development |
+| Nicole    | Accountant | Accounting  |
+| Elizabeth | Sales      | Sales       |
+| Joseph    | Sales      | Sales       |
++-----------+------------+-------------+
 ```
 
 
 #### 外部結合（左外部結合）
 
 ```sql
-select s.name, d.name from staff s left outer join department d on s.department_id = d.id;
+select s.name, s.job, d.name from staff s left outer join department d on s.department_id = d.id;
 ```
 
 ```
-+-----------+-------------+
-| name      | name        |
-+-----------+-------------+
-| Sarah     | Development |
-| Amanda    | Sales       |
-| Michael   | Development |
-| Robert    | Development |
-| James     | Sales       |
-| Nicole    | Accounting  |
-| John      | NULL        |
-| Elizabeth | Development |
-| Joseph    | Sales       |
-+-----------+-------------+
++-----------+------------+-------------+
+| name      | job        | name        |
++-----------+------------+-------------+
+| Sarah     | Engineer   | Development |
+| Amanda    | Engineer   | Development |
+| Michael   | Sales      | Sales       |
+| Robert    | Engineer   | Development |
+| James     | Engineer   | Development |
+| Nicole    | Accountant | Accounting  |
+| John      | Marketer   | NULL        |
+| Elizabeth | Sales      | Sales       |
+| Joseph    | Sales      | Sales       |
++-----------+------------+-------------+
 ```
 
 
 #### 外部結合（右外部結合）
 
 ```sql
-select s.name, d.name from staff s right outer join department d on s.department_id = d.id;
+select s.name, s.job, d.name from staff s right outer join department d on s.department_id = d.id;
 ```
 
 ```
-+-----------+-------------+
-| name      | name        |
-+-----------+-------------+
-| Sarah     | Development |
-| Amanda    | Sales       |
-| Michael   | Development |
-| Robert    | Development |
-| James     | Sales       |
-| Nicole    | Accounting  |
-| Elizabeth | Development |
-| Joseph    | Sales       |
-| NULL      | Legal       |
-+-----------+-------------+
++-----------+------------+-------------+
+| name      | job        | name        |
++-----------+------------+-------------+
+| Sarah     | Engineer   | Development |
+| Amanda    | Engineer   | Development |
+| Michael   | Sales      | Sales       |
+| Robert    | Engineer   | Development |
+| James     | Engineer   | Development |
+| Nicole    | Accountant | Accounting  |
+| Elizabeth | Sales      | Sales       |
+| Joseph    | Sales      | Sales       |
+| NULL      | NULL       | Legal       |
++-----------+------------+-------------+
 ```
 
 ---
 
 ## エクササイズ
 
-[エクササイズ](ex/01_sql_ex.md)
+[エクササイズ](ex/02_sql_ex.md)

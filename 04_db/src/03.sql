@@ -1,4 +1,3 @@
-/* create database my_company; */
 use my_company;
 
 drop table if exists staff;
@@ -18,6 +17,22 @@ create table department(
   name varchar(100)
 );
 
+drop table if exists project;
+create table project(
+  id int primary key,
+  name varchar(100),
+  start_date date,
+  end_date date
+);
+
+drop table if exists assign;
+create table assign(
+  id int primary key,
+  project_id int,
+  staff_id int
+);
+
+
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(1, 'Sarah', 'Engineer', '2016-04-01', 1500, null, 1);
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(2, 'Amanda', 'Engineer', '2016-04-01', 1200, 1, 1);
 insert into staff(id, name, job, hire_date, sal, manager_id, department_id) values(3, 'Michael', 'Sales', '2016-10-01', 1000, null, 2);
@@ -33,40 +48,16 @@ insert into department(id, name) values(2, 'Sales');
 insert into department(id, name) values(3, 'Accounting');
 insert into department(id, name) values(4, 'Legal');
 
-select * from staff;
+insert into project(id, name, start_date, end_date) values(1, 'Project A', '2019-01-01', '2019-06-30');
+insert into project(id, name, start_date, end_date) values(2, 'Project B', '2019-01-01', '2019-09-30');
+insert into project(id, name, start_date, end_date) values(3, 'Project C', '2019-03-01', '2019-04-30');
 
-select name, job, sal from staff;
-
-select name, job work, sal salary from staff;
-
-select * from staff where sal >= 1000;
-
-select * from staff where sal >= 1000 and job = 'engineer';
-
-select * from staff where hire_date >= '2016-04-01' and hire_date <= '2017-04-01';
-
-select * from staff where hire_date between '2016-04-01' and '2017-04-01';
-
-select * from staff where manager_id is null;
-
-select * from staff where name like 'J%';
-
-select * from staff where name like '_o____';
-
-select * from staff where job = 'engineer' order by sal;
-
-select * from staff where job = 'engineer' order by sal desc;
-
-select * from staff where job = 'engineer' order by hire_date, sal;
-
-select sum(sal) from staff;
-
-select job, count(sal) from staff group by job;
-
-select * from staff where sal = (select max(sal) from staff);
-
-select s.name, d.name from staff s inner join department d on s.department_id = d.id;
-
-select s.name, d.name from staff s left outer join department d on s.department_id = d.id;
-
-select s.name, d.name from staff s right outer join department d on s.department_id = d.id;
+insert into assign(id, project_id, staff_id) values(1, 1, 1);
+insert into assign(id, project_id, staff_id) values(2, 1, 5);
+insert into assign(id, project_id, staff_id) values(3, 1, 8);
+insert into assign(id, project_id, staff_id) values(4, 2, 2);
+insert into assign(id, project_id, staff_id) values(5, 2, 3);
+insert into assign(id, project_id, staff_id) values(6, 2, 4);
+insert into assign(id, project_id, staff_id) values(7, 3, 5);
+insert into assign(id, project_id, staff_id) values(8, 3, 7);
+insert into assign(id, project_id, staff_id) values(9, 3, 9);
