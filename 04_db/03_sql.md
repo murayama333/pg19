@@ -9,7 +9,10 @@
 + `project`
 + `assign`
 
+### ER図
+
 <img src="img/01.png" width="500px">
+
 
 
 ### departmentテーブル
@@ -191,7 +194,7 @@ insert into assign(id, project_id, staff_id) values(9, 3, 9);
 
 ## レコードの表示
 
-+ Project Aに所属しているstaffの一覧を表示する
++ `Project A`に所属している`staff`の一覧を表示する
 
 ```sql
 select
@@ -212,7 +215,7 @@ where p.id = 1;
 +-----------+-----------+
 ```
 
-+ Jamesが所属しているprojectの一覧を表示する
++ `James`が所属している`project`の一覧を表示する
 
 ```sql
 select s.name, p.name
@@ -232,7 +235,7 @@ where
 +-------+-----------+
 ```
 
-+ 2019-06-01時点でJamesが所属しているprojectの一覧を表示する
++ `2019-06-01`時点で`James`が所属している`project`の一覧を表示する
 
 ```sql
 select s.name, p.name
