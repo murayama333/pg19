@@ -1,4 +1,4 @@
-# SQL - Part2
+# SQL - Part3
 
 ## 目的
 
@@ -8,6 +8,9 @@
 + `staff`
 + `project`
 + `assign`
+
+<img src="img/01.png" width="500px">
+
 
 ### departmentテーブル
 
@@ -188,9 +191,70 @@ insert into assign(id, project_id, staff_id) values(9, 3, 9);
 
 ## レコードの表示
 
++ Project Aに所属しているstaffの一覧を表示する
+
+```sql
+select
+  p.name, s.name
+from project p
+  inner join assign a on p.id = a.project_id
+  inner join staff s on a.staff_id = s.id
+where p.id = 1;
+```
+
+```
++-----------+-----------+
+| name      | name      |
++-----------+-----------+
+| Project A | Sarah     |
+| Project A | James     |
+| Project A | Elizabeth |
++-----------+-----------+
+```
+
++ Jamesが所属しているprojectの一覧を表示する
+
+```sql
+select s.name, p.name
+from staff s
+  inner join assign a on s.id = a.staff_id
+  inner join project p on a.project_id = p.id
+where
+  s.id = 5;
+```
+
+```
++-------+-----------+
+| name  | name      |
++-------+-----------+
+| James | Project A |
+| James | Project C |
++-------+-----------+
+```
+
++ 2019-06-01時点でJamesが所属しているprojectの一覧を表示する
+
+```sql
+select s.name, p.name
+from staff s
+  inner join assign a on s.id = a.staff_id
+  inner join project p on a.project_id = p.id
+where
+  s.id = 5
+  and p.start_date <= '2019-06-01'
+  and '2019-06-01' <= p.end_date;
+```
+
+```
++-------+-----------+
+| name  | name      |
++-------+-----------+
+| James | Project A |
++-------+-----------+
+```
 
 ---
 
 ## エクササイズ
 
-[エクササイズ](ex/02_sql_ex.md)
+[エクササイズ](ex/03_sql_ex.md)
