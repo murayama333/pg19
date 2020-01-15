@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PHP Sample</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $("#my-btn").click(function() {
+        $.ajax({
+          url: "http://localhost:8000/resp_ex3.php",
+          dataType: 'json',
+          success: function(resp) {
+            var date = resp.date;
+            var fruits = resp.fruits.join("-");
+            $("#my-div").html(date + " " + fruits);
+          }
+        });
+      });
+    })
+  </script>
+</head>
+<body>
+  <h3>Ajax Sample</h3>
+  <hr>
+  <button type="button" id="my-btn">show</button>
+  <div id="my-div"></div>
+</body>
+</html>
