@@ -1,8 +1,9 @@
-drop table if exists message;
-create table message(
-  id int primary key auto_increment,
-  text varchar(255),
-  created_at datetime default current_timestamp
+drop table if exists department;
+create table department(
+  id int primary key,
+  name varchar(100)
 );
 
-insert into message(text) values('Hello World!');
+insert into department(id, name) values(1, 'Development');
+insert into department(id, name) values(2, 'Sales');
+insert into department(id, name) values(3, 'Accounting');
