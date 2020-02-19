@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PHP Sample</title>
+</head>
+<body>
+  <h3>CSRF</h3>
+  <hr>
+  <form action="http://localhost:8000/sc7.php" method="post">
+    ID: <input type="text" name="text">
+    <input type="hidden" name="token" value="<?= $token ?>">
+    <button type="submit">add</button>
+  </form>
+</body>
+</html>
